@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أثر | المدرسة الثانوية الرابعة</title>
+<style>
+:root {
+  --pink:#f5dce8; --pink-dark:#d995b6;
+  --blue:#dceaf8; --blue-dark:#83acd5;
+  --purple:#e9e0f8; --purple-dark:#a894d0;
+  --green:#deeee2; --green-dark:#83b594;
+  --cream:#fffafc; --text:#514753; --muted:#887d8b;
+  --white:#fff; --border:#eee4ed;
+  --shadow:0 8px 25px rgba(105,79,103,.08);
+  --peach:#f8e4d8;
+  --peach-dark:#d9a58c;
+  --mint:#d9f0eb;
+  --mint-dark:#83b9ad;
+  --lavender-light:#f2eafa;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--text);font-family:Tahoma,Arial,sans-serif;line-height:1.8}
+button,input,textarea,select{font:inherit}
+button{cursor:pointer}
+button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--purple-dark);outline-offset:3px}
+header{background:rgba(255,255,255,.94);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:20}
+.navbar{max-width:1150px;margin:auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:12px;cursor:pointer}
+.brand-mark{width:44px;height:44px;border-radius:15px;background:linear-gradient(135deg,var(--pink),var(--purple));display:grid;place-items:center;font-weight:bold;font-size:21px}
+.brand h1{margin:0;font-size:22px;line-height:1.3}
+.brand p{margin:3px 0 0;color:var(--muted);font-size:12px}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.nav-button{border:0;background:transparent;color:var(--text);padding:9px 12px;border-radius:12px}
+.nav-button:hover,.dropdown button:hover{background:#f7edf4}
+.menu-wrap{position:relative}
+.dots-button{width:43px;height:43px;border:1px solid var(--border);background:white;border-radius:14px;font-size:27px;line-height:1}
+.dropdown{position:absolute;left:0;top:52px;width:210px;padding:8px;background:white;border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);display:none;z-index:50}
+.dropdown.open{display:block}
+.dropdown button{display:block;width:100%;text-align:right;border:0;background:transparent;padding:10px 12px;border-radius:10px;color:var(--text)}
+main{max-width:1150px;margin:auto;padding:28px 22px 55px}
+.hero{min-height:245px;border-radius:28px;background:linear-gradient(115deg,#f8e4ed,#e9e4fa 45%,#dff0f5 75%,#e1f1e5);padding:38px;display:flex;align-items:center;justify-content:space-between;gap:24px;overflow:hidden}
+.hero-content{max-width:650px}
+.eyebrow{display:inline-block;background:rgba(255,255,255,.72);padding:5px 13px;border-radius:20px;font-size:13px}
+.hero h2{font-size:clamp(27px,4vw,42px);line-height:1.4;margin:14px 0 8px}
+.hero p{margin:0;color:#6f6274;font-size:15px}
+.hero-shape{width:150px;height:150px;flex-shrink:0;border-radius:45% 55% 60% 40%;background:rgba(255,255,255,.43);border:1px solid rgba(255,255,255,.75);transform:rotate(-12deg);position:relative}
+.hero-shape:before,.hero-shape:after{content:"";position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.8)}
+.hero-shape:before{width:95px;height:95px;top:26px;right:26px}
+.hero-shape:after{width:42px;height:42px;top:52px;right:52px;background:rgba(255,255,255,.3)}
+.section{margin-top:34px}
+.section-heading{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:17px}
+.section-heading h2{margin:0;font-size:23px}
+.section-heading p{margin:3px 0 0;color:var(--muted);font-size:13px}
+.shortcuts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;width:100%;max-width:850px;margin:0 auto}
+.shortcut{min-height:155px;border:1px solid rgba(130,100,130,.08);border-radius:23px;padding:23px 25px;text-align:right;display:flex;align-items:center;gap:17px;color:var(--text);box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s,background .2s,border-color .2s}
+.shortcut:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(105,79,103,.13)}
+.shortcut-mark{width:8px;min-width:8px;height:78px;border-radius:10px}
+.mark-pink{background:var(--pink-dark)}.mark-blue{background:var(--blue-dark)}.mark-purple{background:var(--purple-dark)}.mark-green{background:var(--green-dark)}
+.shortcut h3{font-size:20px;margin:0 0 5px}
+.shortcut p{margin:0;color:#776d7c;font-size:13px}
+.shortcut-arrow{margin-right:auto;font-size:23px;color:#8b7e8e}
+.pink-bg{background:#fff1f7}.blue-bg{background:#eff7ff}.purple-bg{background:#f5f0ff}.green-bg{background:#eff8f1}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{background:white;border:1px solid var(--border);border-radius:20px;padding:20px;box-shadow:var(--shadow);transition:border-color .2s,box-shadow .2s,background .2s}
+.card:hover,.form-card:hover{border-color:#dfcce8}
+.card h3{margin:0 0 8px;font-size:17px}.card p{margin:0;color:var(--muted);font-size:14px}
+.card-date{display:inline-block;margin-top:12px;color:#9b7290;font-size:12px}
+.pill{display:inline-block;padding:4px 10px;border-radius:20px;background:linear-gradient(135deg,#f8e8f1,#eee8fb);color:#826d83;font-size:12px}
+.primary-button,.secondary-button,.danger-button{border:0;border-radius:12px;padding:10px 16px;transition:opacity .2s,transform .2s}
+.primary-button{background:linear-gradient(135deg,#e6d7f5,#d9e8f8);color:#44374d}
+.secondary-button{background:#f4edf4;color:var(--text)}
+.danger-button{background:#f8e3e8;color:#914d61}
+.primary-button:hover,.secondary-button:hover,.danger-button:hover{opacity:.8}
+.full-button{width:100%}
+.page-title{margin:0 0 5px;font-size:28px}.page-description{margin:0 0 23px;color:var(--muted)}
+.back-button{border:0;background:transparent;color:#816f8a;padding:8px 0;margin-bottom:8px}
+.list{display:grid;gap:12px}
+.list-item{display:flex;align-items:center;justify-content:space-between;gap:14px;background:white;border:1px solid var(--border);border-radius:17px;padding:16px 18px;transition:border-color .2s,box-shadow .2s,background .2s}
+.list-item:hover{border-color:#dfcce8;box-shadow:0 5px 16px rgba(105,79,103,.06)}
+.list-item h3{margin:0;font-size:16px}.list-item p{margin:3px 0 0;font-size:13px;color:var(--muted)}
+.list-actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.form-card{background:white;border:1px solid var(--border);border-radius:20px;padding:22px;margin-bottom:22px;box-shadow:var(--shadow);transition:border-color .2s,box-shadow .2s}
+.form-card h3{margin-top:0}
+.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+.field label{font-size:13px;color:#746678}
+.field input,.field textarea,.field select{width:100%;border:1px solid #e8dfe9;border-radius:12px;padding:11px 12px;background:#fffdfd;color:var(--text)}
+.field textarea{min-height:95px;resize:vertical}
+.student-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.student-card{background:white;border:1px solid var(--border);border-radius:15px;padding:14px;text-align:right;color:var(--text);transition:background .2s,border-color .2s,box-shadow .2s}
+.student-card:hover{background:linear-gradient(135deg,#fff5fa,#f3f0ff);border-color:#dfcce8;box-shadow:0 5px 14px rgba(105,79,103,.06)}
+.student-card strong{display:block;font-size:14px}
+.student-card span{display:block;margin-top:5px;color:var(--muted);font-size:12px}
+.status{display:inline-block;border-radius:20px;padding:4px 9px;font-size:11px;background:#f1edf4}
+.status.approved{background:#e5f3e8;color:#41734e}.status.pending{background:#fff0d8;color:#8b6a2f}.status.revision{background:#fae5eb;color:#97536a}
+.empty-state{text-align:center;padding:30px 18px;background:white;border:1px dashed #e6d9e6;border-radius:18px;color:var(--muted)}
+.empty-state h3{color:var(--text);margin:0 0 6px}
+.modal-backdrop{position:fixed;inset:0;background:rgba(49,37,51,.35);z-index:100;display:none;align-items:center;justify-content:center;padding:18px}
+.modal-backdrop.open{display:flex}
+.modal{background:#fffdfd;width:min(650px,100%);max-height:88vh;overflow:auto;border-radius:23px;padding:24px;box-shadow:0 20px 70px rgba(40,20,40,.2)}
+.modal-header{display:flex;align-items:start;justify-content:space-between;gap:14px;margin-bottom:18px}
+.modal-header h2{margin:0;font-size:22px}.modal-header p{margin:4px 0 0;color:var(--muted);font-size:13px}
+.close-button{border:0;background:#f4edf4;width:36px;height:36px;border-radius:12px;font-size:20px;color:var(--text);flex-shrink:0}
+.evidence-item{border:1px solid var(--border);border-radius:15px;padding:15px;margin-top:12px;background:white}
+.evidence-item h3{margin:0 0 5px;font-size:16px}.evidence-item p{margin:5px 0;font-size:13px;color:var(--muted)}
+.evidence-item img{display:block;width:100%;max-height:230px;object-fit:contain;background:#faf5fa;border-radius:10px;margin:10px 0}
+.evidence-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.message-box{background:linear-gradient(135deg,#fff3f8,#f4efff);border:1px solid #ead9f0;border-radius:15px;padding:15px;margin:12px 0}
+.message-box p{margin:5px 0}
+footer{border-top:1px solid var(--border);background:white;padding:25px 20px;text-align:center;color:var(--muted);font-size:12px}
+footer p{margin:5px 0}
+.toast{position:fixed;bottom:22px;right:50%;transform:translateX(50%);background:#514753;color:white;padding:11px 18px;border-radius:12px;z-index:200;display:none;box-shadow:var(--shadow);font-size:14px}
+.toast.show{display:block}
+.hidden{display:none!important}
+.shortcut.pink-bg:hover{background:#ffeaf3}
+.shortcut.blue-bg:hover{background:#e5f2ff}
+.shortcut.purple-bg:hover{background:#eee6ff}
+.shortcut.green-bg:hover{background:#e5f5e9}
+@media(max-width:760px){
+ .navbar{padding:11px 15px}.brand h1{font-size:19px}.brand p{font-size:11px}.nav-button{padding:8px;font-size:13px}
+ main{padding:18px 14px 40px}.hero{padding:27px 23px;min-height:215px}.hero-shape{width:85px;height:85px}
+ .hero-shape:before{width:54px;height:54px;top:15px;right:15px}.hero-shape:after{width:24px;height:24px;top:30px;right:30px}
+ .shortcuts{gap:12px}.shortcut{min-height:130px;padding:17px 14px;gap:11px}.shortcut h3{font-size:16px}.shortcut p{font-size:12px}.shortcut-mark{height:65px}.shortcut-arrow{font-size:18px}
+ .cards{grid-template-columns:1fr}.student-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}
+}
+@media(max-width:420px){
+ .brand{gap:8px}.brand-mark{width:38px;height:38px;border-radius:12px}.nav-actions{gap:3px}.nav-button{font-size:12px}
+ .hero-shape{display:none}.shortcut{min-height:122px;padding:14px 11px}.shortcut h3{font-size:14px}.shortcut p{font-size:11px}.shortcut-arrow{display:none}
+ .student-grid{grid-template-columns:1fr}.list-item{align-items:flex-start;flex-direction:column}
+}
+</style>
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <div class="brand" onclick="goHome()">
+      <div class="brand-mark">أ</div>
+      <div><h1>أثر</h1><p>المدرسة الثانوية الرابعة</p></div>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-button" onclick="goHome()">الرئيسية</button>
+      <div class="menu-wrap">
+        <button class="dots-button" id="dotsButton" aria-label="فتح القائمة" aria-expanded="false" onclick="toggleDropdown()">⋯</button>
+        <div class="dropdown" id="dropdownMenu">
+          <button onclick="showPage('announcements');closeDropdown()">الإعلانات المدرسية</button>
+          <button onclick="showPage('opportunities');closeDropdown()">الفرص التطوعية</button>
+          <button onclick="showPage('behavior');closeDropdown()">السلوك المتميز</button>
+          <button onclick="openAdmin();closeDropdown()">لوحة الإدارة</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="app"></main>
+
+<footer>
+  <p>منصة أثر — المدرسة الثانوية الرابعة</p>
+  <p>عمل الطالبات: ملك فهد، جنى سعيد، شذى عبد العزيز، ندى وليد، ميار ياسين، ميساء عبد الملك</p>
+  <p>بإشراف المعلمة نادية الأسمري</p>
+</footer>
+
+<div class="modal-backdrop" id="modalBackdrop" onclick="backdropClose(event)">
+  <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-header">
+      <div><h2 id="modalTitle">التفاصيل</h2><p id="modalSubtitle"></p></div>
+      <button class="close-button" aria-label="إغلاق" onclick="closeModal()">×</button>
+    </div>
+    <div id="modalContent"></div>
+  </section>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const STORAGE_KEY = "athar_school_platform_v1";
+const ADMIN_PASSWORD = "1234";
+
+const thirdOneNames = [
+"أميرة أحمد ثابت قاسم",
+"ابتسام عبدروس محمد حسين",
+"أميره عيد كداف حشيري",
+"أناهد حمزه عبده محمد قاسم",
+"إيناس محسن أحمد عبده",
+"تاله أمين عيضه النهدي",
+"تولين جمال أحمد ياصبرين",
+"جنى سعيد بن أحمد يامين",
+"جود هاني سالم باحنيف",
+"حلا محمد عباس الموقري",
+"دانه أحمد ابن موسى الفاهمي",
+"دانه أحمد عبدالقادر برعيه",
+"دانيه أحمد عبدالقادر برعيه",
+"رود وليد الغزي الحطامي",
+"ريتال صبري صديق عفش",
+"ريم نصر محمد عدنان",
+"ريناد بكري أحمد عباد",
+"ريناد فؤاد علي الحاشدي",
+"ريناد معاويه علي العبادي",
+"سوسن محمد أحمد عمر المرواني",
+"شذى عبدالعزيز يوسف رضوان",
+"شيماء عصام علي الكمراني",
+"صفيه ناصر علي الفحه",
+"غلا سلطان عامر النهدي",
+"لانا بدر أحمد بانافع",
+"لمى محمدحسن - عبدالرحيم",
+"ليان محمد سليمان باسعد",
+"مرام مصطفى عبدالله طاهر",
+"معينه محمد فؤاد الحادي",
+"ملك فهد علي عقلان",
+"ملك وليد محمد أحمد",
+"ميار ياسين علي علوي",
+"ميساء عبد الملك محمد يحي",
+"ندى عبدالعزيز أحمد قصيله",
+"ندى وليد محمد بن الشبيه",
+"نورسين محمود أحمد سعد",
+"يارا ناصر أحمد محمد اللمعاني"
+];
+
+const thirdTwoNames = [
+"أروى أحمد الحربي",
+"سارة محمد العتيبي",
+"لين خالد القحطاني",
+"جود صالح الغامدي",
+"رهف فهد المطيري",
+"نورة عبدالله الزهراني",
+"لمى ناصر الشهري",
+"دانة وليد الدوسري",
+"شهد ماجد الشمري",
+"مريم فواز الحربي",
+"غلا سعد القحطاني",
+"هيا تركي الغامدي",
+"رغد بدر المطيري",
+"جنى عمر الزهراني",
+"تالا علي الشهري",
+"ريماس أحمد الدوسري",
+"مها محمد الشمري",
+"أثير فهد الحربي",
+"رزان ناصر العتيبي",
+"جوري صالح القحطاني"
+];
+
+const thirdThreeNames = [
+"بيان أحمد الغامدي",
+"ملاك خالد الحربي",
+"أريج فهد العتيبي",
+"غيداء محمد القحطاني",
+"سدن صالح المطيري",
+"فرح عبدالله الزهراني",
+"لين ناصر الشهري",
+"شوق وليد الدوسري",
+"ميساء ماجد الشمري",
+"هند فواز الحربي",
+"نوف سعد القحطاني",
+"جمانة تركي الغامدي",
+"أمل بدر المطيري",
+"سما عمر الزهراني",
+"ديم علي الشهري",
+"أسيل أحمد الدوسري",
+"منار محمد الشمري",
+"سلافة فهد الحربي",
+"غنى ناصر العتيبي",
+"نجلاء صالح القحطاني"
+];
+
+const firstNames = [
+["جود أحمد الحربي","لين محمد العتيبي","سارة خالد القحطاني","ريم عبدالله الغامدي","نورة فهد المطيري","لمى صالح الزهراني","رغد سعد الشهري","دانة ماجد الدوسري","شهد علي الشمري","أريج ناصر الحربي","ليان عمر العتيبي","غلا فيصل القحطاني","مها تركي الغامدي","هيا عبدالرحمن المطيري","رزان فواز الزهراني","لانا بدر الدوسري","تالا حسن الشهري","مريم أحمد الشمري","جنى وليد الحربي","رؤى مازن العتيبي"],
+["أمل خالد الغامدي","عبير محمد القحطاني","رهف عبدالله الحربي","فرح ناصر العتيبي","بيان فهد المطيري","هند صالح الزهراني","سدن ماجد الشهري","أسيل تركي الدوسري","رنا علي الشمري","شوق أحمد الغامدي","ديم وليد الحربي","غيداء سعد القحطاني","جوري نواف العتيبي","ملاك بدر المطيري","إيمان حسن الزهراني","ميس فواز الشهري","سجى ناصر الدوسري","جمانة عمر الشمري","أفنان فهد الحربي","سما خالد العتيبي"],
+["ريماس صالح القحطاني","أثير محمد الحربي","جنى فهد الغامدي","دلال ناصر المطيري","منار أحمد الزهراني","نجلاء سعد العتيبي","غنى وليد الشهري","عهد بدر الدوسري","إسراء علي الشمري","سلافة ماجد الحربي","هتون فواز القحطاني","شذى عمر الغامدي","لمار تركي المطيري","مي أحمد الزهراني","رغد ناصر الشهري","غيد محمد العتيبي","أريام صالح الدوسري","لين فهد الشمري","جود مازن الحربي","نوف خالد القحطاني"]
+];
+
+const secondNames = [
+["سلمى أحمد الحربي","ليلى فهد العتيبي","جنى خالد القحطاني","أروى محمد الغامدي","رهام صالح المطيري","رزان عبدالله الزهراني","مودة ناصر الشهري","رغد وليد الدوسري","شهد ماجد الشمري","مريم فواز الحربي","ديمة سعد القحطاني","نور تركي الغامدي","سارة بدر المطيري","أريج عمر الزهراني","حور علي الشهري","رؤى أحمد الدوسري","بيان محمد الشمري","دانة فهد الحربي","لين ناصر القحطاني","نورة صالح العتيبي"],
+["لمار أحمد القحطاني","هيا خالد الحربي","تالين فهد الغامدي","أفراح محمد المطيري","غلا صالح الزهراني","جوري ناصر الشهري","شوق وليد الدوسري","سدن ماجد الشمري","إيناس سعد الحربي","ميساء تركي القحطاني","أمل عبدالله الغامدي","جمانة فواز المطيري","سما عمر الزهراني","رنا بدر الشهري","عبير ناصر الدوسري","رهف محمد الشمري","أسيل فهد الحربي","مها خالد العتيبي","نوف صالح القحطاني","جود أحمد الغامدي"],
+["لانا أحمد المطيري","أثير ناصر الحربي","جنى فهد العتيبي","غيداء خالد القحطاني","سارة وليد الزهراني","ملاك سعد الشهري","ريماس محمد الدوسري","دانية عمر الشمري","فرح ماجد الحربي","نجلاء تركي الغامدي","شذى بدر المطيري","هند علي الزهراني","أريام فواز العتيبي","رهف ناصر القحطاني","تالا أحمد الشهري","منار خالد الدوسري","سلافة صالح الشمري","ليان فهد الحربي","نورة محمد الغامدي","مريم سعد المطيري"]
+];
+
+const grades = [
+{id:"first",name:"أولى ثانوي",classes:["first-1","first-2","first-3"]},
+{id:"second",name:"ثاني ثانوي",classes:["second-1","second-2","second-3"]},
+{id:"third",name:"ثالث ثانوي",classes:["third-1","third-2","third-3"]}
+];
+
+function makeInitialData(){
+  const classes={};
+
+  grades.forEach(grade=>{
+    grade.classes.forEach((classId,index)=>{
+      let names;
+
+      if(classId==="third-1"){
+        names=thirdOneNames;
+      }else if(classId==="third-2"){
+        names=thirdTwoNames;
+      }else if(classId==="third-3"){
+        names=thirdThreeNames;
+      }else if(grade.id==="first"){
+        names=firstNames[index];
+      }else if(grade.id==="second"){
+        names=secondNames[index];
+      }else{
+        names=[];
+      }
+
+      classes[classId]={
+        id:classId,
+        gradeId:grade.id,
+        gradeName:grade.name,
+        name:"الفصل "+["الأول","الثاني","الثالث"][index],
+        students:names.map((name,i)=>({
+          id:classId+"-student-"+(i+1),
+          name
+        }))
+      };
+    });
+  });
+
+  return {
+    classes,
+    announcements:[
+      {
+        id:"announcement-1",
+        title:"مرحبًا بكم في منصة أثر",
+        body:"منصة مدرسية لتنظيم الإعلانات والفرص التطوعية وتوثيق السلوك المتميز.",
+        date:new Date().toISOString().slice(0,10)
+      },
+      {
+        id:"announcement-2",
+        title:"تنبيه للطالبات",
+        body:"يرجى متابعة الإعلانات المدرسية باستمرار للاطلاع على آخر المستجدات.",
+        date:new Date().toISOString().slice(0,10)
+      }
+    ],
+    opportunities:[
+      {
+        id:"opportunity-1",
+        title:"المشاركة في الأنشطة المدرسية",
+        body:"شاركي في الأنشطة المدرسية وساهمي في صنع أثر إيجابي داخل المدرسة.",
+        date:new Date().toISOString().slice(0,10)
+      }
+    ],
+    evidence:[],
+    messages:[]
+  };
+}
+
+function seedEvidenceIfNeeded(){
+  if(localStorage.getItem("athar_demo_evidence_seeded_v1")==="yes") return;
+
+  const sampleProjects=[
+    {title:"مشروع توعوي",description:"إعداد مادة توعوية مدرسية وتنسيقها بشكل مرتب."},
+    {title:"مشاركة في نشاط مدرسي",description:"توثيق المشاركة في نشاط مدرسي والتعاون مع الزميلات."},
+    {title:"بحث ومصادر معلومات",description:"إعداد ملخص بحثي والاستفادة من مصادر معلومات إلكترونية."},
+    {title:"مبادرة تطوعية",description:"المساهمة في مبادرة تطوعية لخدمة المجتمع المدرسي."},
+    {title:"عرض تعليمي",description:"إعداد عرض تعليمي مختصر وتقديم المعلومات بطريقة واضحة."}
+  ];
+
+  let n=0;
+
+  Object.values(data.classes).forEach((cls,classIndex)=>{
+    const total=cls.students.length;
+    const count=classIndex===6 ? 13 : (classIndex%3)+3;
+
+    for(let i=0;i<Math.min(count,total);i++){
+      const student=cls.students[(i*2+1)%total];
+      const project=sampleProjects[(n+i)%sampleProjects.length];
+
+      data.evidence.push({
+        id:"demo-evidence-"+(++n),
+        studentId:student.id,
+        title:project.title,
+        description:project.description,
+        date:new Date().toISOString().slice(0,10),
+        status:i%4===0?"pending":"approved",
+        feedback:"",
+        demo:true
+      });
+    }
+  });
+
+  localStorage.setItem("athar_demo_evidence_seeded_v1","yes");
+  saveData();
+}
+
+function loadData(){
+  let saved=null;
+
+  try{
+    saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||"null");
+  }catch(e){}
+
+  if(!saved) return makeInitialData();
+
+  const fresh=makeInitialData();
+
+  saved.classes=saved.classes||fresh.classes;
+  saved.announcements=saved.announcements||fresh.announcements;
+  saved.opportunities=saved.opportunities||fresh.opportunities;
+  saved.evidence=saved.evidence||[];
+  saved.messages=saved.messages||[];
+
+  Object.keys(fresh.classes).forEach(classId=>{
+    if(!saved.classes[classId]){
+      saved.classes[classId]=fresh.classes[classId];
+    }
+  });
+
+  /*
+    تحديث أسماء الطالبات للفصول التي تستخدم قوائم محددة،
+    مع الحفاظ على معرّفات الطالبات حتى لا تنقطع الشواهد.
+  */
+  grades.forEach(grade=>{
+    if(
+      grade.id!=="first" &&
+      grade.id!=="second" &&
+      grade.id!=="third"
+    ) return;
+
+    grade.classes.forEach((classId,index)=>{
+      const freshClass=fresh.classes[classId];
+      const oldClass=saved.classes[classId];
+
+      const oldStudents=oldClass && Array.isArray(oldClass.students)
+        ? oldClass.students
+        : [];
+
+      /*
+        نحدّث أسماء ثالث ثانوي الفصل الثاني والثالث،
+        ونُبقي أسماء الفصل الأول كما هي.
+        أما أولى وثاني ثانوي فتستمر أسماؤهما من القوائم المحددة.
+      */
+      const shouldUpdateNames =
+        grade.id==="first" ||
+        grade.id==="second" ||
+        classId==="third-2" ||
+        classId==="third-3";
+
+      if(!shouldUpdateNames) return;
+
+      freshClass.students=freshClass.students.map((freshStudent,studentIndex)=>{
+        const oldStudent=oldStudents[studentIndex];
+
+        return {
+          id:oldStudent && oldStudent.id
+            ? oldStudent.id
+            : freshStudent.id,
+          name:freshStudent.name
+        };
+      });
+
+      saved.classes[classId]={
+        ...freshClass,
+        ...oldClass,
+        id:classId,
+        gradeId:grade.id,
+        gradeName:grade.name,
+        name:oldClass && oldClass.name
+          ? oldClass.name
+          : freshClass.name,
+        students:freshClass.students
+      };
+    });
+  });
+
+  /* إبقاء أسماء ثالث ثانوي الفصل الأول كما هي تمامًا */
+  const existingThirdOne=saved.classes["third-1"];
+
+  if(existingThirdOne && Array.isArray(existingThirdOne.students)){
+    const existingNames=existingThirdOne.students.map(s=>s.name);
+
+    const namesMatch=existingNames.length===thirdOneNames.length &&
+      thirdOneNames.every((name,i)=>existingNames[i]===name);
+
+    if(!namesMatch){
+      saved.classes["third-1"].students=thirdOneNames.map((name,i)=>({
+        id:existingThirdOne.students[i]?.id || "third-1-student-"+(i+1),
+        name
+      }));
+    }
+  }
+
+  return saved;
+}
+
+let data=loadData();
+let currentPage="home";
+let currentStudent=null;
+let currentClassId=null;
+let adminLoggedIn=false;
+let adminStage=null;
+let adminClassId=null;
+
+function saveData(){
+  localStorage.setItem(STORAGE_KEY,JSON.stringify(data));
+}
+
+function escapeHTML(value){
+  return String(value??"").replace(/[&<>"']/g,char=>({
+    "&":"&amp;",
+    "<":"&lt;",
+    ">":"&gt;",
+    '"':"&quot;",
+    "'":"&#39;"
+  })[char]);
+}
+
+function showToast(message){
+  const toast=document.getElementById("toast");
+  toast.textContent=message;
+  toast.classList.add("show");
+  clearTimeout(showToast.timer);
+  showToast.timer=setTimeout(()=>toast.classList.remove("show"),2600);
+}
+
+function toggleDropdown(){
+  const menu=document.getElementById("dropdownMenu");
+  const button=document.getElementById("dotsButton");
+  const open=menu.classList.toggle("open");
+  button.setAttribute("aria-expanded",String(open));
+}
+
+function closeDropdown(){
+  document.getElementById("dropdownMenu").classList.remove("open");
+  document.getElementById("dotsButton").setAttribute("aria-expanded","false");
+}
+
+document.addEventListener("click",event=>{
+  const wrap=document.querySelector(".menu-wrap");
+  if(wrap&&!wrap.contains(event.target))closeDropdown();
+});
+
+function goHome(){
+  currentPage="home";
+  render();
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+function showPage(page){
+  currentPage=page;
+  render();
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+function openAdmin(){
+  if(adminLoggedIn){
+    showPage("admin");
+    return;
+  }
+
+  openModal("دخول الإدارة","أدخلي كلمة المرور للمتابعة",`
+    <form onsubmit="loginAdmin(event)">
+      <div class="field">
+        <label for="adminPassword">كلمة المرور</label>
+        <input id="adminPassword" type="password" required>
+      </div>
+      <p style="font-size:12px;color:#887d8b">للتجربة المحلية: كلمة المرور هي 1234.</p>
+      <button class="primary-button full-button" type="submit">دخول</button>
+    </form>`);
+}
+
+function loginAdmin(event){
+  event.preventDefault();
+
+  if(document.getElementById("adminPassword").value!==ADMIN_PASSWORD){
+    showToast("كلمة المرور غير صحيحة");
+    return;
+  }
+
+  adminLoggedIn=true;
+  closeModal();
+  showPage("admin");
+}
+
+function homePage(){
+  const announcements=data.announcements.slice(0,3);
+  const opportunities=data.opportunities.slice(0,3);
+
+  return `
+    <section class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">المدرسة الثانوية الرابعة</span>
+        <h2>أثر طيب، وعطاء مستمر</h2>
+        <p>مساحة مدرسية تجمع الأخبار والفرص التطوعية وتوثيق السلوك المتميز في مكان واحد.</p>
+      </div>
+      <div class="hero-shape" aria-hidden="true"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div><h2>أحدث الإعلانات</h2><p>آخر المستجدات المدرسية.</p></div>
+        <button class="secondary-button" onclick="showPage('announcements')">عرض الكل</button>
+      </div>
+      ${announcements.length?`<div class="cards">${announcements.map(item=>`
+        <article class="card">
+          <h3>${escapeHTML(item.title)}</h3>
+          <p>${escapeHTML(item.body)}</p>
+          <span class="card-date">${escapeHTML(item.date||"")}</span>
+        </article>
+      `).join("")}</div>`:`<div class="empty-state">لا توجد إعلانات حاليًا.</div>`}
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div><h2>خدمات المنصة</h2><p>اختاري الخدمة التي ترغبين في الوصول إليها.</p></div>
+      </div>
+
+      <div class="shortcuts">
+        <button class="shortcut pink-bg" onclick="showPage('announcements')">
+          <span class="shortcut-mark mark-pink"></span>
+          <span><h3>الإعلانات المدرسية</h3><p>تابعي آخر أخبار المدرسة وتنبيهاتها.</p></span>
+          <span class="shortcut-arrow">←</span>
+        </button>
+
+        <button class="shortcut blue-bg" onclick="showPage('opportunities')">
+          <span class="shortcut-mark mark-blue"></span>
+          <span><h3>الفرص التطوعية</h3><p>اكتشفي فرص المشاركة والعطاء.</p></span>
+          <span class="shortcut-arrow">←</span>
+        </button>
+
+        <button class="shortcut purple-bg" onclick="showPage('behavior')">
+          <span class="shortcut-mark mark-purple"></span>
+          <span><h3>السلوك المتميز</h3><p>استعرضي طريقة توثيق الشواهد.</p></span>
+          <span class="shortcut-arrow">←</span>
+        </button>
+
+        <button class="shortcut green-bg" onclick="openAdmin()">
+          <span class="shortcut-mark mark-green"></span>
+          <span><h3>لوحة الإدارة</h3><p>إدارة الإعلانات والفصول والشواهد.</p></span>
+          <span class="shortcut-arrow">←</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div><h2>الفرص التطوعية</h2><p>فرص للمشاركة وصناعة أثر إيجابي.</p></div>
+        <button class="secondary-button" onclick="showPage('opportunities')">عرض الكل</button>
+      </div>
+
+      ${opportunities.length?`<div class="cards">${opportunities.map(item=>`
+        <article class="card">
+          <span class="pill">فرصة تطوعية</span>
+          <h3 style="margin-top:12px">${escapeHTML(item.title)}</h3>
+          <p>${escapeHTML(item.body)}</p>
+          <span class="card-date">${escapeHTML(item.date||"")}</span>
+        </article>
+      `).join("")}</div>`:`<div class="empty-state">لا توجد فرص تطوعية حاليًا.</div>`}
+    </section>`;
+}
+
+function announcementsPage(){
+  return `
+  <button class="back-button" onclick="goHome()">← العودة للرئيسية</button>
+  <h1 class="page-title">الإعلانات المدرسية</h1>
+  <p class="page-description">تابعي آخر الإعلانات والمستجدات في المدرسة.</p>
+  ${data.announcements.length?`<div class="cards">${data.announcements.map(item=>`
+    <article class="card">
+      <h3>${escapeHTML(item.title)}</h3>
+      <p>${escapeHTML(item.body)}</p>
+      <span class="card-date">${escapeHTML(item.date||"")}</span>
+    </article>
+  `).join("")}</div>`:`<div class="empty-state"><h3>لا توجد إعلانات</h3><p>ستظهر الإعلانات الجديدة هنا.</p></div>`}`;
+}
+
+function opportunitiesPage(){
+  return `
+  <button class="back-button" onclick="goHome()">← العودة للرئيسية</button>
+  <h1 class="page-title">الفرص التطوعية</h1>
+  <p class="page-description">شاركي في الأنشطة والمبادرات التي تصنع أثرًا إيجابيًا.</p>
+  ${data.opportunities.length?`<div class="cards">${data.opportunities.map(item=>`
+    <article class="card">
+      <span class="pill">فرصة تطوعية</span>
+      <h3 style="margin-top:12px">${escapeHTML(item.title)}</h3>
+      <p>${escapeHTML(item.body)}</p>
+      <span class="card-date">${escapeHTML(item.date||"")}</span>
+    </article>
+  `).join("")}</div>`:`<div class="empty-state"><h3>لا توجد فرص حاليًا</h3></div>`}`;
+}
+
+function behaviorPage(){
+  return `
+  <button class="back-button" onclick="goHome()">← العودة للرئيسية</button>
+  <h1 class="page-title">السلوك المتميز</h1>
+  <p class="page-description">اختاري المرحلة ثم الفصل ثم اسم الطالبة للاطلاع على الشواهد أو فتح نموذج الرسائل.</p>
+  <div class="cards">${grades.map((grade,index)=>`
+    <button class="card ${["pink-bg","blue-bg","purple-bg"][index]}"
+      style="text-align:right;border:0;cursor:pointer"
+      onclick="openGrade('${grade.id}')">
+      <span class="pill">${index+1} ثانوي</span>
+      <h3 style="margin-top:12px">${escapeHTML(grade.name)}</h3>
+      <p>عرض الفصول والطالبات</p>
+    </button>
+  `).join("")}</div>`;
+}
+
+function openGrade(gradeId){
+  const grade=grades.find(item=>item.id===gradeId);
+  if(!grade)return;
+
+  openModal(grade.name,"اختاري الفصل الدراسي",`
+    <div class="list">${grade.classes.map(classId=>{
+      const cls=data.classes[classId];
+
+      return `
+        <button class="list-item" style="width:100%;text-align:right;cursor:pointer"
+          onclick="openClass('${classId}')">
+          <div>
+            <h3>${escapeHTML(cls.name)}</h3>
+            <p>${cls.students.length} طالبة</p>
+          </div>
+          <span class="shortcut-arrow">←</span>
+        </button>`;
+    }).join("")}</div>`);
+}
+
+function openClass(classId){
+  currentClassId=classId;
+  const cls=data.classes[classId];
+  if(!cls)return;
+
+  openModal(cls.name,cls.gradeName+" — اختاري اسم الطالبة",`
+    <div class="student-grid">${cls.students.map(student=>{
+      const count=data.evidence.filter(item=>item.studentId===student.id).length;
+
+      return `
+        <button class="student-card" onclick="openStudent('${student.id}')">
+          <strong>${escapeHTML(student.name)}</strong>
+          <span>${count?count+" شاهد مسجل":"لا توجد شواهد مسجلة"}</span>
+        </button>`;
+    }).join("")}</div>`);
+}
+
+function openStudent(studentId){
+  let student=null,cls=null;
+
+  Object.values(data.classes).some(item=>{
+    const found=item.students.find(person=>person.id===studentId);
+
+    if(found){
+      student=found;
+      cls=item;
+      return true;
+    }
+
+    return false;
+  });
+
+  if(!student||!cls)return;
+
+  currentStudent={
+    ...student,
+    classId:cls.id,
+    className:cls.name,
+    gradeName:cls.gradeName
+  };
+
+  const evidence=data.evidence.filter(item=>item.studentId===studentId);
+
+  openModal(student.name,cls.gradeName+" — "+cls.name,`
+    <div class="evidence-actions" style="margin:0 0 14px">
+      <button class="primary-button" onclick="openMessageForm('${student.id}')">رسالة للطالبة</button>
+      <button class="secondary-button" onclick="openAddEvidenceForm('${student.id}')">إضافة شاهد تجريبي</button>
+    </div>
+    ${evidence.length?evidence.map(item=>evidenceHTML(item,false)).join(""):`
+      <div class="empty-state">
+        <h3>لا توجد شواهد مسجلة</h3>
+        <p>لم تتم إضافة شواهد لهذه الطالبة حتى الآن.</p>
+      </div>`}
+  `);
+}
+
+function evidenceHTML(item,isAdmin){
+  const labels={
+    pending:"بانتظار المراجعة",
+    approved:"تمت الموافقة",
+    revision:"تحتاج إلى تعديل"
+  };
+
+  return `
+  <article class="evidence-item">
+    <h3>${escapeHTML(item.title)}</h3>
+    <p>${escapeHTML(item.description||"لا يوجد وصف إضافي.")}</p>
+    <p>تاريخ الإضافة: ${escapeHTML(item.date||"")}</p>
+    <span class="status ${escapeHTML(item.status)}">${labels[item.status]||"قيد المراجعة"}</span>
+    ${item.status==="revision"&&item.feedback?`<p>ملاحظة الإدارة: ${escapeHTML(item.feedback)}</p>`:""}
+    ${isAdmin?`
+      <div class="evidence-actions">
+        <button class="primary-button" onclick="updateEvidenceStatus('${item.id}','approved')">موافقة</button>
+        <button class="secondary-button" onclick="requestRevision('${item.id}')">طلب تعديل</button>
+      </div>`:""}
+  </article>`;
+}
+
+function openMessageForm(studentId){
+  const student=findStudent(studentId);
+  if(!student)return;
+
+  openModal("رسالة للطالبة",student.name,`
+    <div class="message-box">
+      <p><strong>نموذج توضيحي</strong></p>
+      <p>يمكن استخدام هذه الخانة مستقبلًا للتواصل مع الطالبة.</p>
+    </div>
+
+    <form onsubmit="saveSampleMessage(event,'${studentId}')">
+      <div class="field">
+        <label for="messageSubject">عنوان الرسالة</label>
+        <input id="messageSubject" required maxlength="100" value="تنبيه بخصوص الشواهد">
+      </div>
+
+      <div class="field" style="margin-top:12px">
+        <label for="messageBody">نص الرسالة</label>
+        <textarea id="messageBody" required maxlength="1000">مرحبًا، نرجو مراجعة الشواهد المسجلة في منصة أثر واستكمال المطلوب عند الحاجة. شكرًا لتعاونك.</textarea>
+      </div>
+
+      <button class="primary-button full-button" style="margin-top:14px" type="submit">حفظ نموذج الرسالة</button>
+      <p style="font-size:12px;color:#887d8b">لن يتم إرسال الرسالة للطالبة؛ هذه خاصية تجريبية للتوضيح فقط.</p>
+    </form>`);
+}
+
+function saveSampleMessage(event,studentId){
+  event.preventDefault();
+
+  const student=findStudent(studentId);
+  const subject=document.getElementById("messageSubject").value.trim();
+  const body=document.getElementById("messageBody").value.trim();
+
+  if(!student||!subject||!body)return;
+
+  data.messages=data.messages||[];
+
+  data.messages.unshift({
+    id:"message-"+Date.now(),
+    studentId,
+    studentName:student.name,
+    subject,
+    body,
+    date:new Date().toISOString().slice(0,10),
+    demo:true
+  });
+
+  saveData();
+
+  openModal("تم حفظ نموذج الرسالة","هذه رسالة تجريبية غير مرسلة",`
+    <div class="message-box">
+      <p><strong>إلى: ${escapeHTML(student.name)}</strong></p>
+      <p><strong>العنوان:</strong> ${escapeHTML(subject)}</p>
+      <p>${escapeHTML(body)}</p>
+    </div>
+    <p style="font-size:13px;color:#887d8b">تم حفظها كنموذج داخل الموقع فقط، ولم تصل إلى الطالبة.</p>
+    <button class="primary-button full-button" onclick="openStudent('${studentId}')">العودة إلى ملف الطالبة</button>`);
+}
+
+function openAddEvidenceForm(studentId){
+  const student=findStudent(studentId);
+  if(!student)return;
+
+  openModal("إضافة شاهد تجريبي",student.name,`
+    <form onsubmit="addSampleEvidence(event,'${studentId}')">
+      <div class="field">
+        <label for="evTitle">عنوان الشاهد</label>
+        <input id="evTitle" required maxlength="120" value="مشروع مدرسي">
+      </div>
+
+      <div class="field" style="margin-top:12px">
+        <label for="evDescription">وصف الشاهد</label>
+        <textarea id="evDescription" required maxlength="1000">مشاركة تجريبية في مشروع مدرسي بهدف توضيح طريقة تسجيل الشواهد.</textarea>
+      </div>
+
+      <button class="primary-button full-button" style="margin-top:14px" type="submit">حفظ الشاهد التجريبي</button>
+    </form>`);
+}
+
+function addSampleEvidence(event,studentId){
+  event.preventDefault();
+
+  const title=document.getElementById("evTitle").value.trim();
+  const description=document.getElementById("evDescription").value.trim();
+
+  data.evidence.unshift({
+    id:"evidence-"+Date.now(),
+    studentId,
+    title,
+    description,
+    date:new Date().toISOString().slice(0,10),
+    status:"pending",
+    feedback:"",
+    demo:true
+  });
+
+  saveData();
+  showToast("تمت إضافة الشاهد التجريبي");
+  openStudent(studentId);
+}
+
+function openModal(title,subtitle,content){
+  document.getElementById("modalTitle").textContent=title;
+  document.getElementById("modalSubtitle").textContent=subtitle||"";
+  document.getElementById("modalContent").innerHTML=content;
+  document.getElementById("modalBackdrop").classList.add("open");
+}
+
+function closeModal(){
+  document.getElementById("modalBackdrop").classList.remove("open");
+}
+
+function backdropClose(event){
+  if(event.target.id==="modalBackdrop")closeModal();
+}
+
+document.addEventListener("keydown",event=>{
+  if(event.key==="Escape"){
+    closeModal();
+    closeDropdown();
+  }
+});
+
+function adminPage(){
+  if(!adminLoggedIn){
+    return `
+      <div class="empty-state">
+        <h3>يلزم تسجيل الدخول</h3>
+        <button class="primary-button" onclick="openAdmin()">دخول الإدارة</button>
+      </div>`;
+  }
+
+  return `
+  <button class="back-button" onclick="goHome()">← العودة للرئيسية</button>
+  <h1 class="page-title">لوحة الإدارة</h1>
+  <p class="page-description">إدارة محتوى المنصة ومتابعة الشواهد الطلابية.</p>
+
+  <div class="cards">
+    <article class="card pink-bg">
+      <h3>الإعلانات</h3>
+      <p>${data.announcements.length} إعلان</p>
+      <button class="primary-button full-button" style="margin-top:14px" onclick="showPage('manageAnnouncements')">إدارة الإعلانات</button>
+    </article>
+
+    <article class="card blue-bg">
+      <h3>الفرص التطوعية</h3>
+      <p>${data.opportunities.length} فرصة</p>
+      <button class="primary-button full-button" style="margin-top:14px" onclick="showPage('manageOpportunities')">إدارة الفرص</button>
+    </article>
+
+    <article class="card purple-bg">
+      <h3>الشواهد</h3>
+      <p>${data.evidence.length} شاهد مسجل</p>
+      <button class="primary-button full-button" style="margin-top:14px" onclick="showPage('manageEvidence')">مراجعة الشواهد</button>
+    </article>
+  </div>
+
+  <section class="section">
+    <div class="section-heading">
+      <div><h2>متابعة الفصول</h2><p>اختاري المرحلة للوصول إلى الفصول والطالبات اللاتي لم يضفن شواهد.</p></div>
+    </div>
+
+    <div class="cards">${grades.map((grade,index)=>`
+      <button class="card ${["pink-bg","blue-bg","purple-bg"][index]}"
+        style="text-align:right;border:0;cursor:pointer"
+        onclick="openAdminStage('${grade.id}')">
+        <h3>${escapeHTML(grade.name)}</h3>
+        <p>عرض الفصول وحالة الشواهد</p>
+      </button>
+    `).join("")}</div>
+  </section>
+
+  <section class="section">
+    <button class="secondary-button" onclick="logoutAdmin()">تسجيل الخروج من الإدارة</button>
+  </section>`;
+}
+
+function openAdminStage(gradeId){
+  adminStage=gradeId;
+  currentPage="adminClasses";
+  render();
+}
+
+function adminClassesPage(){
+  const grade=grades.find(item=>item.id===adminStage);
+  if(!grade)return adminPage();
+
+  return `
+  <button class="back-button" onclick="showPage('admin')">← العودة للوحة الإدارة</button>
+  <h1 class="page-title">${escapeHTML(grade.name)}</h1>
+  <p class="page-description">اختاري الفصل لمراجعة الشواهد والطالبات اللاتي لم يضفن شواهد.</p>
+
+  <div class="list">${grade.classes.map(classId=>{
+    const cls=data.classes[classId];
+    const missing=cls.students.filter(student=>!data.evidence.some(item=>item.studentId===student.id)).length;
+
+    return `
+      <div class="list-item">
+        <div>
+          <h3>${escapeHTML(cls.name)}</h3>
+          <p>${cls.students.length} طالبة — ${missing} بلا شواهد</p>
+        </div>
+        <button class="primary-button" onclick="openAdminClass('${classId}')">عرض الطالبات</button>
+      </div>`;
+  }).join("")}</div>`;
+}
+
+function openAdminClass(classId){
+  adminClassId=classId;
+  currentPage="adminStudents";
+  render();
+}
+
+function adminStudentsPage(){
+  const cls=data.classes[adminClassId];
+  if(!cls)return adminPage();
+
+  const missing=cls.students.filter(student=>!data.evidence.some(item=>item.studentId===student.id));
+
+  return `
+  <button class="back-button" onclick="showPage('adminClasses')">← العودة للفصول</button>
+  <h1 class="page-title">${escapeHTML(cls.name)}</h1>
+  <p class="page-description">طالبات بلا شواهد مسجلة: ${missing.length}</p>
+
+  <div class="section-heading">
+    <div><h2>الطالبات اللاتي لم يضفن شواهد</h2></div>
+    <button class="secondary-button" onclick="copyMissingStudents('${cls.id}')">نسخ رسالة التذكير</button>
+  </div>
+
+  ${missing.length?`<div class="list">${missing.map(student=>`
+    <div class="list-item">
+      <div>
+        <h3>${escapeHTML(student.name)}</h3>
+        <p>لم تسجل أي شواهد حتى الآن.</p>
+      </div>
+      <div class="list-actions">
+        <button class="secondary-button" onclick="openStudent('${student.id}')">عرض</button>
+        <button class="primary-button" onclick="openMessageForm('${student.id}')">رسالة للطالبة</button>
+      </div>
+    </div>
+  `).join("")}</div>`:`<div class="empty-state"><h3>جميع الطالبات لديهن شواهد مسجلة</h3></div>`}
+
+  <section class="section">
+    <div class="section-heading">
+      <div><h2>جميع طالبات الفصل</h2><p>يمكنك فتح ملف أي طالبة أو نموذج الرسائل.</p></div>
+    </div>
+
+    <div class="student-grid">${cls.students.map(student=>{
+      const count=data.evidence.filter(item=>item.studentId===student.id).length;
+
+      return `
+        <div class="student-card">
+          <strong>${escapeHTML(student.name)}</strong>
+          <span>${count?count+" شاهد":"لا توجد شواهد"}</span>
+          <div class="evidence-actions">
+            <button class="secondary-button" onclick="openStudent('${student.id}')">الملف</button>
+            <button class="primary-button" onclick="openMessageForm('${student.id}')">رسالة</button>
+          </div>
+        </div>`;
+    }).join("")}</div>
+  </section>`;
+}
+
+function copyMissingStudents(classId){
+  const cls=data.classes[classId];
+  const missing=cls.students.filter(student=>!data.evidence.some(item=>item.studentId===student.id));
+
+  if(!missing.length){
+    showToast("لا توجد طالبات بلا شواهد");
+    return;
+  }
+
+  const names=missing.map((student,index)=>(index+1)+". "+student.name).join("\n");
+
+  copyText(
+    "السلام عليكم ورحمة الله وبركاته\n"+
+    "نأمل من الطالبات الموضحة أسماؤهن أدناه استكمال إضافة الشواهد في منصة أثر:\n\n"+
+    names+
+    "\n\nشاكرين لكن تعاونكن."
+  );
+}
+
+function copyText(text){
+  if(navigator.clipboard&&window.isSecureContext){
+    navigator.clipboard.writeText(text)
+      .then(()=>showToast("تم نسخ النص"))
+      .catch(()=>fallbackCopy(text));
+  }else{
+    fallbackCopy(text);
+  }
+}
+
+function fallbackCopy(text){
+  const textarea=document.createElement("textarea");
+  textarea.value=text;
+  textarea.style.position="fixed";
+  textarea.style.opacity="0";
+  document.body.appendChild(textarea);
+  textarea.select();
+
+  try{
+    document.execCommand("copy");
+    showToast("تم نسخ النص");
+  }catch(e){
+    openModal("نسخ النص","انسخي الرسالة يدويًا",`
+      <div class="field">
+        <textarea rows="10" id="manualCopyText">${escapeHTML(text)}</textarea>
+      </div>`);
+  }
+
+  textarea.remove();
+}
+
+function logoutAdmin(){
+  adminLoggedIn=false;
+  adminStage=null;
+  adminClassId=null;
+  goHome();
+  showToast("تم تسجيل الخروج");
+}
+
+function manageListPage(type){
+  const isAnnouncements=type==="announcements";
+  const items=isAnnouncements?data.announcements:data.opportunities;
+  const title=isAnnouncements?"إدارة الإعلانات":"إدارة الفرص التطوعية";
+
+  return `
+  <button class="back-button" onclick="showPage('admin')">← العودة للوحة الإدارة</button>
+  <h1 class="page-title">${title}</h1>
+  <p class="page-description">إضافة المحتوى أو حذفه من المنصة.</p>
+
+  <form class="form-card" onsubmit="addContent(event,'${type}')">
+    <h3>إضافة جديد</h3>
+    <div class="form-grid">
+      <div class="field full">
+        <label for="contentTitle">العنوان</label>
+        <input id="contentTitle" name="title" required maxlength="120">
+      </div>
+
+      <div class="field full">
+        <label for="contentBody">التفاصيل</label>
+        <textarea id="contentBody" name="body" required maxlength="1500"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="contentDate">التاريخ</label>
+        <input id="contentDate" name="date" type="date" value="${new Date().toISOString().slice(0,10)}">
+      </div>
+
+      <div class="field" style="justify-content:end">
+        <button class="primary-button" type="submit">إضافة المحتوى</button>
+      </div>
+    </div>
+  </form>
+
+  ${items.length?`<div class="list">${items.map(item=>`
+    <div class="list-item">
+      <div>
+        <h3>${escapeHTML(item.title)}</h3>
+        <p>${escapeHTML(item.body)}</p>
+        <span class="card-date">${escapeHTML(item.date||"")}</span>
+      </div>
+      <button class="danger-button" onclick="deleteContent('${type}','${item.id}')">حذف</button>
+    </div>
+  `).join("")}</div>`:`<div class="empty-state">لا يوجد محتوى حتى الآن.</div>`}`;
+}
+
+function addContent(event,type){
+  event.preventDefault();
+
+  const form=event.target;
+  const title=form.elements.title.value.trim();
+  const body=form.elements.body.value.trim();
+  const date=form.elements.date.value;
+
+  if(!title||!body){
+    showToast("يرجى تعبئة العنوان والتفاصيل");
+    return;
+  }
+
+  const key=type==="announcements"?"announcements":"opportunities";
+
+  data[key].unshift({
+    id:type+"-"+Date.now(),
+    title,
+    body,
+    date
+  });
+
+  saveData();
+  showToast("تمت الإضافة بنجاح");
+  render();
+}
+
+function deleteContent(type,id){
+  const key=type==="announcements"?"announcements":"opportunities";
+
+  if(!data[key].some(item=>item.id===id))return;
+
+  if(!confirm("هل أنتِ متأكدة من حذف هذا المحتوى؟"))return;
+
+  data[key]=data[key].filter(item=>item.id!==id);
+
+  saveData();
+  render();
+  showToast("تم الحذف");
+}
+
+function manageEvidencePage(){
+  const all=[...data.evidence].sort((a,b)=>(b.date||"").localeCompare(a.date||""));
+
+  return `
+  <button class="back-button" onclick="showPage('admin')">← العودة للوحة الإدارة</button>
+  <h1 class="page-title">مراجعة الشواهد</h1>
+  <p class="page-description">راجعي الشواهد المضافة ووافقي عليها أو اطلبي تعديلها.</p>
+
+  ${all.length?all.map(item=>{
+    const student=findStudent(item.studentId);
+
+    return `
+      <article class="evidence-item">
+        <p>الطالبة: ${escapeHTML(student?student.name:"طالبة غير معروفة")}</p>
+        ${evidenceHTML(item,true)}
+      </article>`;
+  }).join(""):`<div class="empty-state"><h3>لا توجد شواهد</h3><p>ستظهر الشواهد التي تتم إضافتها هنا.</p></div>`}`;
+}
+
+function findStudent(studentId){
+  for(const cls of Object.values(data.classes)){
+    const student=cls.students.find(item=>item.id===studentId);
+    if(student)return student;
+  }
+
+  return null;
+}
+
+function updateEvidenceStatus(evidenceId,status){
+  const item=data.evidence.find(entry=>entry.id===evidenceId);
+  if(!item)return;
+
+  item.status=status;
+  item.feedback="";
+  saveData();
+  closeModal();
+  render();
+  showToast("تم تحديث حالة الشاهد");
+}
+
+function requestRevision(evidenceId){
+  const feedback=prompt("اكتبي ملاحظة توضح التعديل المطلوب:");
+  if(feedback===null)return;
+
+  const item=data.evidence.find(entry=>entry.id===evidenceId);
+  if(!item)return;
+
+  item.status="revision";
+  item.feedback=feedback.trim();
+
+  saveData();
+  closeModal();
+  render();
+  showToast("تم تسجيل طلب التعديل");
+}
+
+function render(){
+  const app=document.getElementById("app");
+
+  const pages={
+    home:homePage,
+    announcements:announcementsPage,
+    opportunities:opportunitiesPage,
+    behavior:behaviorPage,
+    admin:adminPage,
+    adminClasses:adminClassesPage,
+    adminStudents:adminStudentsPage,
+    manageAnnouncements:()=>manageListPage("announcements"),
+    manageOpportunities:()=>manageListPage("opportunities"),
+    manageEvidence:manageEvidencePage
+  };
+
+  app.innerHTML=(pages[currentPage]||homePage)();
+}
+
+if(!data.messages)data.messages=[];
+
+seedEvidenceIfNeeded();
+saveData();
+render();
+</script>
+</body>
+</html>
